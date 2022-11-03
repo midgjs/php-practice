@@ -101,7 +101,7 @@ function process_form($input) {
     <? } ?>
     <tr>
         <td>메뉴:</td>
-        <td><?= $form->input('text',['name' => 'min_price']) ?></td>
+        <td><?= $form->input('text',['name' => 'dish_id']) ?></td>
     </tr>
     <tr>
         <td colspan="2" align="center">
