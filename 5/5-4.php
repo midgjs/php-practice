@@ -14,7 +14,7 @@ $tip = 10;
 while(($cost = restaurant_check($meal,$tax,$tip)) < $cash_on_hand)
 {
     $tip++;
-    echo "팁으로 $tip% ($cost) 정도는 낼 수 있지\n";
+    print "팁으로 $tip% ($cost) 정도는 낼 수 있지\n";
 }
 
 

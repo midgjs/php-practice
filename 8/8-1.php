@@ -23,7 +23,7 @@ try {
 } catch (PDOException $e) {
     $html = "메뉴를 가져올 수 없습니다:" . $e->getMessage();
 }
-echo $html;
+print $html;
 
 
 

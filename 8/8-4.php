@@ -5,7 +5,7 @@ require 'FormHelper.php';
 try {
     $db = new PDO('pgsql:/tmp/restaurant.db');
 } catch (PDOException $e) {
-    echo "접속할 수 없습니다: " . $e->getMessage();
+    print "접속할 수 없습니다: " . $e->getMessage();
     exit();
 }
 

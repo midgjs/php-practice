@@ -22,11 +22,11 @@ function web_color2($red, $green, $blue)
     return sprintf('#%02x%02x%02x' ,$red, $green, $blue);
 }
 
-echo web_color1(255,255,255);
-echo web_color1(0,0,0);
-echo web_color1(32,32,32);
+print web_color1(255,255,255);
+print web_color1(0,0,0);
+print web_color1(32,32,32);
 
-echo web_color2('ff','ff','ff');
+print web_color2('ff','ff','ff');
 
 
 

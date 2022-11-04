@@ -7,7 +7,7 @@ require 'FormHelper.php';
 try {
     $db = new PDO('pgsql:/tmp/restaurant.db');
 } catch (PDOException $e) {
-    echo "접속할 수 없습니다: " . $e->getMessage();
+    print "접속할 수 없습니다: " . $e->getMessage();
     exit();
 }
 
@@ -63,11 +63,11 @@ function process_form($input) {
     $dish = $stmt->fetch();;
 
     if(count($dish) == 0) {
-        echo '발견된 메뉴가 없습니다.';
+        print '발견된 메뉴가 없습니다.';
     } else {
-        echo '<table>';
-        echo '<tr><th>ID</th><th>메뉴명</th><th>가격</th>';
-        echo '<th>맵기</th></tr>';
+        print '<table>';
+        print '<tr><th>ID</th><th>메뉴명</th><th>가격</th>';
+        print '<th>맵기</th></tr>';
         if($dish->is_spicy == 1) {
             $spicy = 'Yes';
         } else {
@@ -77,7 +77,7 @@ function process_form($input) {
         printf('<tr><td>%d</td><td>%s</td><td>$%.02f</td><td>%s</td></tr>',
             $dish->dish_id,
             htmlentities($dish->dish_name), $dish->price, $spicy);
-        echo '</table>';
+        print '</table>';
 
     }
 }
